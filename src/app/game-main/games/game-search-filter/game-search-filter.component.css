@@ -1,0 +1,32 @@
+.game-search-filter {
+  padding: 10px;
+  color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+}
+
+.sort-by {
+  margin: auto;
+  margin-right: 5%;
+}
+
+.sort-by select {
+  background: black;
+  color: white;
+}
+
+.show {
+  margin: auto;
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+.show select {
+  background: black;
+  color: white;
+}

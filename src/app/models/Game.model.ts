@@ -1,4 +1,6 @@
+import { Console } from './Console.model';
 import { Genre } from './Genre.model';
+import { Image } from './Image.model';
 
 export interface Game {
   id?: number;
