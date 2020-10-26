@@ -1,11 +1,14 @@
 .games {
+  position: relative;
   width: 70%;
   margin: auto;
   background: black;
 }
 
 .game-search-options {
+  position: absolute;
   width: 20%;
+  padding: 10px;
 }
 
 .game-container {
