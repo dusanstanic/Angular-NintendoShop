@@ -1,0 +1,23 @@
+<!-- <p>game works!</p>
+<p>Game with id {{ game.id }}</p>
+<p>Game with name {{ game.name }}</p>
+<hr />
+<a [routerLink]="['/gameMain/games', 10, 'Anna']">Load Anna (10)</a> -->
+<div class="game">
+  <div class="game-image-wrapper">
+    <img class="game-image" src="{{ game.image }}" />
+  </div>
+  <div class="game-logo-wrapper">
+    <img class="game-logo" src="{{ game.consoles[0].logo }}" />
+  </div>
+  <div class="game-title-wrapper">
+    <div class="game-title">{{ game.title }}</div>
+  </div>
+  <div class="game-price-wrapper">
+    <div class="game-price">{{ game.price }}</div>
+    <span>
+      <span class="game-price-decimal">, 00</span>
+      <span class="game-price-currency">RSD</span>
+    </span>
+  </div>
+</div>

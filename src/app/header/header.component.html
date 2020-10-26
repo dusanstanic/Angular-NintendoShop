@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="image" src="http://127.0.0.1:8887/telephone-icon.png" />
+          <span class="info">065 23 23 839</span>
+        </div>
+        <div class="column">
+          <img class="image" src="http://127.0.0.1:8887/message-icon.png" />
+          <span class="info">dusan.stanic97@hotmail.com</span>
+        </div>
+        <div class="column column-right">
+          <img
+            class="image"
+            src="http://127.0.0.1:8887/Shopping%20Cart%20-%20Icon%203.png"
+          />
+          <span class="info">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-middle">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="logo-wrapper">
+            <img class="logo" src="http://127.0.0.1:8887/Nintendo%20Logo.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="row">
+      <ul class="nav-options">
+        <li class="nav-option">
+          <a
+            routerLink="/"
+            routerLinkActive="activeLink"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-option">
+          <a routerLink="/gameMain" routerLinkActive="activeLink">Games</a>
+        </li>
+        <li class="nav-option">
+          <a [routerLink]="['/consoleMain']" routerLinkActive="activeLink"
+            >Consoles</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

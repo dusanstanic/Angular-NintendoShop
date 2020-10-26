@@ -1,0 +1,15 @@
+.games {
+  width: 70%;
+  margin: auto;
+  background: black;
+}
+
+.game-search-options {
+  width: 20%;
+}
+
+.game-container {
+  width: 80%;
+  margin: auto;
+  margin-right: 0;
+}

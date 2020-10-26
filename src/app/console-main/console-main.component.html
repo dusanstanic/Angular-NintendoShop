@@ -1,0 +1,11 @@
+<p>console-main works!</p>
+<a [routerLink]="['/consoleMain']">ConsoleMain</a>
+<a
+  [routerLink]="['/consoleMain/consoles', 5, 'edit']"
+  [queryParams]="{ allowEdit: '1' }"
+  fragment="loading"
+  routerLinkActive="activeLink"
+  >ConsoleMain</a
+>
+<button (click)="showConsoles()">ConsoleMain</button>
+<router-outlet></router-outlet>

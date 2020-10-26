@@ -1,0 +1,97 @@
+.header {
+  font-family: "Rubik", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+
+.header-top {
+  background: black;
+  color: white;
+  padding: 0.5rem;
+}
+
+.row {
+  position: relative;
+}
+
+.column {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.column-right {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  padding: 0.1rem 0.2rem;
+  background: rgb(253, 201, 14);
+  text-align: center;
+  color: black;
+}
+
+.image {
+  height: 1rem;
+  vertical-align: middle;
+}
+
+.info {
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-size: 13px;
+}
+
+.header-middle {
+  background: black;
+  color: white;
+}
+
+.logo-wrapper {
+  display: inline-block;
+  height: 4rem;
+  width: 20%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.logo {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.header-bottom {
+  padding: 0.5rem;
+  background: rgb(253, 201, 14);
+  color: black;
+}
+
+.nav-options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-option {
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 0.2rem;
+  padding: 0.2rem;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.nav-option:hover {
+  background: rgba(43, 35, 5, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}

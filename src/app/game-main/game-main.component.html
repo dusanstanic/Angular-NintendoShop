@@ -1,0 +1,29 @@
+<!-- <p>game-main works!</p>
+<p>{{ gameId }}</p>
+<button [disabled]="getShowGame()">YO</button>
+<input type="text" (input)="enter($event)" />
+<input type="text" [(ngModel)]="gameName" />
+
+<br /><br />
+<button (click)="createGame()">Show NgIf</button>
+<p *ngIf="gameCreated">NgIf</p>
+
+<br /><br />
+<button (click)="createGame()">Show NgIf</button>
+<p *ngIf="gameCreated; else noServer">NgIf Game Created</p>
+<ng-template #noServer><p>NgIf Not Created Yet</p></ng-template>
+
+<p [ngStyle]="{ backgroundColor: getColor() }">
+  Server with ID {{ getServiceName() }} is {{ serverStatus }}
+</p>
+
+<br /><br />
+<div *ngFor="let game of games">{{ game }}</div>
+<div>{{ game }}</div> -->
+
+<!-- <div class="game-main"></div>
+<a [routerLink]="['games']">Load Games</a>
+<button (click)="showGames()">Load Games</button>
+<hr /> -->
+<!-- <router-outlet></router-outlet> -->
+<app-games></app-games>

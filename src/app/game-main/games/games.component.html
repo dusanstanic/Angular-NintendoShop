@@ -1,0 +1,21 @@
+<!-- <p>games works!</p>
+<a
+  [routerLink]="['/gameMain/games', game.id, game.name]"
+  *ngFor="let game of games"
+  >{{ game.id }}</a
+>
+<hr />
+<button *ngFor="let game of games" (click)="showGame(game.id)">
+  {{ game.id }}
+  <h3>{{ game.id }}</h3>
+</button> -->
+
+<div class="games">
+  <div class="game-search-filters"></div>
+  <div class="game-search-options"><div>HEllo</div></div>
+  <div class="game-container">
+    <app-game *ngFor="let game of games" [game]="game"></app-game>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
