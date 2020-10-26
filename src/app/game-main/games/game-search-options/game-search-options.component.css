@@ -1,0 +1,19 @@
+.game-search-options {
+  color: white;
+  overflow-wrap: break-word;
+}
+
+.search-option-group {
+  margin-top: 5px;
+}
+
+.search-option-group input[type="checkbox"] {
+  margin: 0;
+  vertical-align: top;
+}
+
+.search-option-group label[for="option"] {
+  margin-left: 5px;
+  font-size: 12px;
+  vertical-align: top;
+}

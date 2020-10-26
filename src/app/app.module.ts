@@ -19,6 +19,8 @@ import { CanDeactivateGuard } from './can-deactivate-guard.service';
 import { HeaderComponent } from './header/header.component';
 import { GameService } from './services/game.service';
 import { DataStorageService } from './services/data-storage.service';
+import { GameSearchFilterComponent } from './game-main/games/game-search-filter/game-search-filter.component';
+import { GameSearchOptionsComponent } from './game-main/games/game-search-options/game-search-options.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { DataStorageService } from './services/data-storage.service';
     ConsolesComponent,
     PageNotFoundComponent,
     HeaderComponent,
+    GameSearchFilterComponent,
+    GameSearchOptionsComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [

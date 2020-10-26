@@ -11,8 +11,12 @@
 </button> -->
 
 <div class="games">
-  <div class="game-search-filters"></div>
-  <div class="game-search-options"><div>HEllo</div></div>
+  <div class="game-search-filters">
+    <app-game-search-filter></app-game-search-filter>
+  </div>
+  <div class="game-search-options">
+    <app-game-search-options></app-game-search-options>
+  </div>
   <div class="game-container">
     <app-game *ngFor="let game of games" [game]="game"></app-game>
   </div>
