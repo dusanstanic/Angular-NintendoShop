@@ -1,0 +1,4 @@
+<app-backdrop [show]="show" [hideModal]="hideModal"></app-backdrop>
+<div [class]="'modal' + ' ' + (show ? 'showModal' : '')">
+  <ng-content></ng-content>
+</div>
