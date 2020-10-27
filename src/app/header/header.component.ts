@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,5 +21,9 @@ export class HeaderComponent implements OnInit {
 
   hideModal = () => {
     this.isModalShown = false;
+  };
+
+  yo = () => {
+    console.log('yo');
   };
 }
