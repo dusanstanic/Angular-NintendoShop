@@ -24,6 +24,8 @@ import { GameSearchOptionsComponent } from './game-main/games/game-search-option
 
 import { gameDataReducer } from './store/reducers/gameData.reducer';
 import { RegisterComponent } from './register/register.component';
+import { ModalComponent } from './UI/modal/modal.component';
+import { BackdropComponent } from './UI/backdrop/backdrop.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { RegisterComponent } from './register/register.component';
     GameSearchFilterComponent,
     GameSearchOptionsComponent,
     RegisterComponent,
+    ModalComponent,
+    BackdropComponent,
   ],
   imports: [
     BrowserModule,
