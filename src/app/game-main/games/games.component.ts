@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Game } from 'src/app/models/Game.model';
 import { GameService } from '../../services/game.service';
+import { StoreInterface } from '../../store/reducer.model';
 
 @Component({
   selector: 'app-games',
@@ -14,14 +16,19 @@ export class GamesComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private gameService: GameService
+    private gameService: GameService,
+    private store: Store<StoreInterface>
   ) {}
 
   ngOnInit(): void {
-    this.gameService.gamesChanged.subscribe((games) => {
-      this.games = games;
+    this.store.select('gameData').subscribe((gameData) => {
+      this.games = gameData.games;
     });
-    this.games = this.gameService.games;
+
+    /*this.gameService.gamesChanged.subscribe((games) => {
+      this.games = games;
+    });*/
+    //this.games = this.gameService.games;
   }
 
   // showGame(id: number) {

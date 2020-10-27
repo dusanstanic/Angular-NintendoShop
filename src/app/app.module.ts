@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { GameMainComponent } from './game-main/game-main.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ConsoleMainComponent } from './console-main/console-main.component';
 import { GamesComponent } from './game-main/games/games.component';
@@ -22,6 +22,9 @@ import { DataStorageService } from './services/data-storage.service';
 import { GameSearchFilterComponent } from './game-main/games/game-search-filter/game-search-filter.component';
 import { GameSearchOptionsComponent } from './game-main/games/game-search-options/game-search-options.component';
 
+import { gameDataReducer } from './store/reducers/gameData.reducer';
+import { RegisterComponent } from './register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +38,15 @@ import { GameSearchOptionsComponent } from './game-main/games/game-search-option
     HeaderComponent,
     GameSearchFilterComponent,
     GameSearchOptionsComponent,
+    RegisterComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    StoreModule.forRoot({ gameData: gameDataReducer }),
+  ],
   providers: [
     AuthService,
     AuthGuard,
