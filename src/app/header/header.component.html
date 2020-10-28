@@ -1,6 +1,7 @@
 <header class="header">
   <app-modal [show]="isModalShown" [hideModal]="hideModal"
-    ><app-register></app-register
+    ><div *ngIf="isModalShown">
+      <app-register [hideModal]="hideModal"></app-register></div
   ></app-modal>
   <div class="header-top">
     <div class="container">
