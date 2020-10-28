@@ -85,3 +85,26 @@ input.ng-invalid.ng-touched {
   cursor: not-allowed;
   background: rgb(202, 49, 49, 0.8);
 }
+
+.spinner {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem auto;
+  background: transparent;
+  border-radius: 5rem;
+  border: 5px solid black;
+  border-top-color: coral;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  background: white;
+}

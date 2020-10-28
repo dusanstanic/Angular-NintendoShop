@@ -1,6 +1,7 @@
 <div class="register">
   <div class="header"><h2>Login</h2></div>
-  <form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div *ngIf="isLoading" class="spinner"></div>
+  <form *ngIf="!isLoading" (ngSubmit)="onSubmit()" #f="ngForm">
     <div class="row">
       <div class="column">
         <div class="form-group">
@@ -95,5 +96,6 @@
         Login
       </button>
     </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   </form>
 </div>
