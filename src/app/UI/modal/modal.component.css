@@ -1,0 +1,15 @@
+.modal {
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  z-index: 1000;
+  transform: translateX(-50%) translateY(-100vh);
+  width: 25rem;
+  background: black;
+  background: rgb(253, 201, 14);
+  transition: all 1.5s;
+}
+
+.showModal {
+  transform: translateX(-50%) translateY(20vh);
+}

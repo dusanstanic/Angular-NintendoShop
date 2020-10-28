@@ -1,0 +1,101 @@
+<div class="register">
+  <div class="header"><h2>Login</h2></div>
+  <div *ngIf="isLoading" class="spinner"></div>
+  <form *ngIf="!isLoading" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="row">
+      <div class="column">
+        <div class="form-group">
+          <label>First Name</label
+          ><input
+            type="text"
+            ngModel
+            name="firstName"
+            required
+            #firstName="ngModel"
+          />
+        </div>
+        <span class="error-input" *ngIf="!firstName.valid && firstName.touched"
+          >*Field is required</span
+        >
+      </div>
+      <div class="column">
+        <div class="form-group">
+          <label>Last Name</label
+          ><input type="text" ngModel name="lastName" required />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="form-group">
+          <label>Email</label
+          ><input type="text" ngModel name="email" required email />
+        </div>
+      </div>
+      <div class="column">
+        <div class="form-group">
+          <label>Phone Number</label
+          ><input type="text" name="phone" ngModel required />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="form-group">
+          <label>City</label><input type="text" ngModel name="city" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="form-group">
+          <label>Postal Code</label
+          ><input type="text" ngModel name="postalCode" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="form-group">
+          <label>Street</label><input type="text" ngModel name="street" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="form-group">
+          <label>Street Number</label
+          ><input type="text" ngModel name="streetNumber" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="form-group">
+          <label>Password</label><input type="text" ngModel name="password" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="form-group">
+          <label>Confirm Password</label
+          ><input type="text" ngModel name="confirmPassword" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="form-group">
+          <label>Gender</label>
+          <div *ngFor="let genderr of genders">
+            <input type="radio" [value]="genderr" ngModel name="gender" /><label
+              for="gender"
+              >{{ genderr }}</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row login">
+      <button class="login-btn" [disabled]="!f.valid" type="submit">
+        Login
+      </button>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </form>
+</div>

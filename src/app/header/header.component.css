@@ -24,7 +24,7 @@
 
 .column-right {
   position: absolute;
-  right: 0%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 5px;
@@ -32,6 +32,16 @@
   background: rgb(253, 201, 14);
   text-align: center;
   color: black;
+}
+
+.column-right-0 {
+  position: absolute;
+  right: 7rem;
+}
+
+.column-right-1 {
+  position: absolute;
+  right: 3rem;
 }
 
 .image {
@@ -43,6 +53,17 @@
   display: inline-block;
   margin-left: 0.2rem;
   font-size: 13px;
+}
+
+.auth {
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.auth:hover {
+  text-decoration: underline;
 }
 
 .header-middle {
