@@ -9,8 +9,14 @@ import { GameComponent } from './game-main/games/game/game.component';
 import { GamesComponent } from './game-main/games/games.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 const appRoutes: Routes = [
+  {
+    path: 'userPanel',
+    component: UserPanelComponent,
+    canActivate: [AuthGuard],
+  },
   {
     path: 'gameMain',
     //canActivate: [AuthGuard],

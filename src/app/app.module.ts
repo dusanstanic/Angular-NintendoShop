@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { GameMainComponent } from './game-main/game-main.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConsoleMainComponent } from './console-main/console-main.component';
 import { GamesComponent } from './game-main/games/games.component';
 import { GameComponent } from './game-main/games/game/game.component';
@@ -23,7 +23,11 @@ import { GameSearchFilterComponent } from './game-main/games/game-search-filter/
 import { GameSearchOptionsComponent } from './game-main/games/game-search-options/game-search-options.component';
 
 import { gameDataReducer } from './store/reducers/gameData.reducer';
+import { ModalComponent } from './UI/modal/modal.component';
+import { AuthInterceptorService } from './auth-interceptor.service';
 import { RegisterComponent } from './register/register.component';
+import { BackdropComponent } from './UI/backdrop/backdrop.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,9 @@ import { RegisterComponent } from './register/register.component';
     GameSearchFilterComponent,
     GameSearchOptionsComponent,
     RegisterComponent,
+    ModalComponent,
+    BackdropComponent,
+    UserPanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,11 @@ import { RegisterComponent } from './register/register.component';
     CanDeactivateGuard,
     GameService,
     DataStorageService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
